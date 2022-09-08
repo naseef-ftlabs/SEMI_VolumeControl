@@ -9,13 +9,13 @@ pipeline {
             sh 'pio run'
         }
     }
-    // stage('Testing') {
-    //   agent {
-    //     docker { image 'throwtheswitch/madsciencelab' }
-    //   }
-    //   steps {
-    //     sh 'ceedling'
-    //   }
-    // }
+    stage('Testing') {
+      agent {
+        docker { image 'throwtheswitch/madsciencelab' }
+      }
+      steps {
+        sh 'ceedling'
+      }
+    }
   }
 }
