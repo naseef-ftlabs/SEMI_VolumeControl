@@ -6,7 +6,7 @@ pipeline {
             docker { image 'sglahn/platformio-core:latest'}
         }
         steps {
-            sh 'run'
+            sh 'pio run'
         }
     }
     // stage('Testing') {
